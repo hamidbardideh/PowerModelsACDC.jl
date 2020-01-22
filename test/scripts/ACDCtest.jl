@@ -37,7 +37,7 @@ gurobi = JuMP.with_optimizer(Gurobi.Optimizer, Presolve=0)
 s = Dict("output" => Dict("branch_flows" => true), "conv_losses_mp" => true)
 
 resultAC = run_acdcopf(file, ACPPowerModel, ipopt; setting = s)
-
+Hello
 resultLPAC = run_acdcopf(file, LPACCPowerModel, ipopt; setting = s)
 
 resultQC = run_acdcopf(file, QCRMPowerModel, ipopt; setting = s)
